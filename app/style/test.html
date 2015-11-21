@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+   <title></title>
+ </head>
+ <body>
+  <style>
+    #viewer-core .postcard {
+      /*border: teal thick solid;*/
+      height: 500%;
+      width: 65%;
+      margin: 2% auto 0;
+    }
+    #viewer-core div.postcard.front {
+      /*background: url(../assets/contact_tagline_1.png) no-repeat top center; */
+      background: url(../assets/contact_postcard_front.png) no-repeat top center; 
+      position: relative;
+      background-size: 100%;
+    }  
+    #viewer-core .postcard.back {
+      background: url(../assets/contact_postcard_back.png) no-repeat top center;
+      background-size: 100%;
+      position: relative;
+    }
+    .postcard img {
+      position: absolute;
+      top: 73%;
+      left: 25%;
+      height: 17%;
+    }
+  </style> 
+ 
+  <div id="viewer-core">
+    <div class="postcard-flipper">
+      <div class="postcard front"></div>
+      <div class="postcard back"></div>
+    </div>
+  </div>
+ 
+ 
+ 
+ </body>
+ </html>
+ 
+  
