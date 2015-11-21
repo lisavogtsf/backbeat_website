@@ -1,0 +1,73 @@
+<svg ng-click="showSocialMedia()" src="../app/assets/ico_info.svg" alt="information" id="info" class="active" version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="176.000000pt" height="176.000000pt" viewBox="0 0 176.000000 176.000000"
+ preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(0.000000,176.000000) scale(0.100000,-0.100000)"
+                fill="#000000" stroke="none">
+                <path class="info" d="M836 1388 c-9 -46 -16 -89 -16 -95 0 -10 25 -13 90 -13 102 0 88 -13
+                114 112 7 37 11 70 8 73 -3 3 -44 5 -92 5 l-87 0 -17 -82z"/>
+                <path class="info" d="M785 1108 c-11 -29 -145 -759 -145 -787 0 -21 9 -41 26 -58 25 -25
+                27 -25 147 -21 94 4 135 10 179 27 89 34 175 97 223 163 44 58 83 143 72 154
+                -8 8 -125 33 -154 34 -13 0 -23 -6 -23 -13 0 -28 -62 -98 -112 -126 -47 -27
+                -132 -50 -143 -39 -2 2 23 147 55 322 33 176 60 327 60 337 0 17 -9 19 -90 19
+                -63 0 -92 -4 -95 -12z"/>
+                </g>
+                </svg>
+
+
+
+
+
+/*background: url(/app/assets/ico_info_HOME_def.png) #163131 2.5cm bottom no-repeat;*/
+
+/*background: #163131 url(/app/assets/ico_info_HOME_high.png) no-repeat;*/
+
+
+
+
+Logic for contact page getting complicated
+
+$scope.front (if true, show front, if false show back)
+
+$scope.postcardSent (if false show blank card, if true show filled in card)
+
+
+Need to show: front of postcard (flip)
+back of postcard with input fields (flip send)
+back of poscard with filled-in fields (send another)
+ 
+ would ng-switch be better? or ng-switch nested inside show/hide
+
+
+
+
+
+your work is impeccable and I wish to do business with you by fully opening my Scrooge McDuck-esque money bin to you.
+
+Sir Reginald Cashtrousers VIII
+
+reallyreallyrich@aol.com
+
+
+<!-- hiding for testing, actually shouldn't be here at all but helpful code -->
+                  <div ng-show="company" class="individuals-container">
+                    <!-- call up name and on/off small image for each individual -->
+                    <div ng-repeat="individual in individuals" class="individuals-inner">
+                      <!-- first the case where no name has been chosen -->
+                      <!-- <div ng-hide="chosen" class="individual"> -->
+                      <div class="individual">
+                        <h4>{{individual.name}}</h4>
+                        <img ng-src="../app/assets/ABOUT_btn_sm_{{individual.id}}_off.png" alt="{{individual.name}}}">
+                      </div>
+                      <!-- differentiate whether this is the person who has been chosen or not -->
+                    </div>
+
+
+
+
+  <div class="tagline"><img ng-src="contact_tagline_{{postcard.tagline}}.png" alt=""></div>  
+   // show taglines on front of postcard, randomize??
+  $scope.postcard.tagline = 1;
+
+
+  trying to use $scope.postcard seems to mess up the page, front and back show at once
+  tagline and closing stop working correctly

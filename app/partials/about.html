@@ -1,0 +1,107 @@
+<div ng-controller="AboutCtrl" id="about" class="full-frame about">
+
+   <div id="viewer-cluster">
+    <nav id="viewer-outer-menubar">
+        <ul class="links">
+          <li><a href="/app/" class="active">HOME</a></li>
+          <li><a href="/app/contact" class="active">CONTACT</a></li>
+          <li><a class="inactive">ABOUT</a></li>
+          <li><a href="" class="active" onclick='return false;'>PRODUCTS</a></li>
+          <li><a href="" class="active" onclick='return false;'>CLIENTS</a></li>
+        </ul>
+      </nav>
+      <div id="viewer-trim">
+        <div id="viewer-core">
+          <!-- <div id="viewer-clipper"> -->
+            <!-- <div id="viewer-scaler"> -->
+              <!-- sidebar on left side of screen, choice of Company or Individuals -->
+          <div id="sidebar">
+            <img src="../app/assets/ABOUT_btn_comp_selected.png" alt="Company (selected)" ng-show="company" class="company">
+            <h2 class="inactive" ng-show="company" class="company">COMPANY</h2>
+            <img src="../app/assets/ABOUT_btn_comp_default.png" alt="Company" class="active" ng-hide="company" ng-click="selectCompany()" class="company">                    
+            <h2 class="active" ng-hide="company" ng-click="selectCompany()" class="company">COMPANY</h2>
+
+            <img src="../app/assets/ABOUT_btn_indi_default.png" alt="Individuals" class="active" ng-show="company" ng-click="selectIndividuals()" class="individuals">
+            <h2 class="active" ng-show="company" ng-click="selectIndividuals()" class="individuals">INDIVIDUALS</h2>
+            <img src="../app/assets/ABOUT_btn_indi_selected.png" alt="Individuals (selected)" ng-hide="company" class="individuals">
+            <h2 class="inactive" ng-hide="company" class="individuals">INDIVIDUALS</h2>  
+          </div>
+
+           <!-- About the Company -->
+          <div id="main-company" ng-show="company">
+            <img src="../app/assets/ABOUT_ui_pointer.png" alt="pointer" ng-show="company" class="pointer company">
+            <img id="company-logo" src="../app/assets/ABOUT_company_logo.png" alt="Backbeat Networks Logo">
+            <div id="company-text"><p>Backbeat Networks something something. Cupcake ipsum dolor sit amet muffin sweet roll with a smattering of Hodor hodor - hodor; hodor hodor... Hodor hodor hodor?!</p>
+            <p>Marzipan chupa chups caramels chocolate bar tootsie roll biscuit pastry danish carrot cake. Pie muffin icing tiramisu cookie. Cake tart wafer. Jujubes pudding pudding croissant. Topping ice cream tiramisu cupcake marshmallow tootsie roll.</p></div>
+          </div>
+
+          <!-- About the individuals -->
+          <div id="main-individuals" ng-hide="company">
+            <img src="../app/assets/ABOUT_ui_pointer.png" alt="pointer" ng-hide="company" class="pointer individuals">
+
+           <!-- please choose/chosen individual, upper part of individuals page -->
+            <div id="choice-container">
+              <div id="choose-individual-text" ng-hide="chosen"><h1>Please Choose</h1></div>
+
+
+              <!-- displays single "chosen" individual through angular filter -->
+              <div id="chosen-individual" ng-show="chosen" ng-repeat="individual in individuals | filter: id = chosen">
+                <h1>{{individual.name}}</h1>
+
+                <img ng-src="../app/assets/ABOUT_port_{{individual.id}}.png" alt="portrait of {{individual.name}}">
+                <h2>{{individual.haikus[haiku_index % individual.haikus.length]["line-one"]}}</h2>
+                <h2>{{individual.haikus[haiku_index % individual.haikus.length]["line-two"]}}</h2>
+                <h2>{{individual.haikus[haiku_index % individual.haikus.length]["line-three"]}}</h2>
+
+                <!-- if this individual has more than one haiku, give link to see different one -->
+                <div ng-show="{{individual.haikus.length > 1}}">
+                  <h3 id="another" ng-click="nextHaiku()" class="active">ANOTHER?</h3>
+                </div>
+              </div><!-- end details of chosen individual -->
+            </div><!-- end upper half of page section, choose/chosen -->
+
+            <!-- begin selection area to choose an individual from the group-->
+            <div class="individuals-container">
+              <div class="individuals-inner">
+                <!-- first the case where no name has been chosen, all are active -->
+                <!-- <div ng-hide="chosen" class="individual"> -->
+                <a ng-show="individuals" ng-click="chooseIndividual(individual.id)" ng-repeat="individual in individuals" class="active">
+                  <div class="individual">
+                    <img ng-show="individual.id == chosen" ng-src="../app/assets/ABOUT_btn_sm_{{individual.id}}_on.png" alt="{{individual.name}}">
+                    <img ng-hide="individual.id == chosen" ng-src="../app/assets/ABOUT_btn_sm_{{individual.id}}_off.png" alt="{{individual.name}}">
+                    <h4>{{individual.name}}</h4>
+                  </div>
+                </a>
+                <!-- differentiate whether this is the person who has been chosen or not -->
+              </div>
+            </div>
+
+
+          </div>
+
+            <!-- </div> closes scalar -->
+          <!-- </div> closes clipper -->
+
+          <!-- info and social media menu -->
+         <footer  ng-controller="TitleCtrl">
+            <div ng-hide="socialMedia" id="viewer-info-footer">
+              <div ng-click="showSocialMedia()" id="info" class="active animate-social-media"></div>
+            </div> 
+            <div ng-show="socialMedia" id="viewer-inner-footer" class="animate-social-media">
+              <!-- twitter button -->
+              <a href="https://twitter.com/backbeatnet"><div id="tw-button" class="active menu"></div></a>
+              <!-- facebook button -->
+              <a href="https://www.facebook.com/BackbeatNetworks"><div id="fb-button" class="active menu"></div></a>
+              <!-- linkedin button -->
+              <a href="https://www.linkedin.com/company/backbeat-networks-inc-"><div id="li-button" class="active menu"></div></a>
+              <!-- hide social media/down button -->
+              <div ng-click="hideSocialMedia()" id="down-button" class="active"></div> 
+              
+            </div>
+
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- </div> -->

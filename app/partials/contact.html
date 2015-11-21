@@ -1,0 +1,84 @@
+<div ng-controller="ContactCtrl" id="contact" class="full-frame contact">
+  <div id="viewer-cluster">
+    <nav id="viewer-outer-menubar">
+      <ul class="links">
+        <li><a href="/app/" class="active">HOME</a></li>
+        <li><a class="inactive">CONTACT</a></li>
+        <li><a href="/app/about" class="active">ABOUT</a></li>
+        <li><a href="" class="active" onclick='return false;'>PRODUCTS</a></li>
+        <li><a href="" class="active" onclick='return false;'>CLIENTS</a></li>
+      </ul>
+    </nav>
+      <div id="viewer-trim">
+        <div id="viewer-core">
+          
+          <!-- postcard front -->
+          <div ng-show="postcardFront" ng-click="showBack()" class="postcard front active" alt="Greetings from the Internet! (postcard)">
+            <img ng-src="/app/assets/CONTACT_tagline_{{taglineIndex + 1}}.png" alt="{{tagline[taglineIndex]}}">
+          </div>
+
+          <!-- postcard back, form to fill out, unsent -->
+          <form ng-hide="postcardFront" ng-submit="sendPostcard()" ng-click="clearPostcardErrors()" novalidate class="postcard back" alt="back of postcard, write your message here">
+            <img id="greeting" ng-src="/app/assets/CONTACT_greeting_{{greetingIndex + 1}}.png" alt="{{greeting[greetingIndex]}}">
+            <img id="closing" ng-src="/app/assets/CONTACT_closing_{{closingIndex + 1}}.png" alt="{{closing[closingIndex]}}">
+            <textarea ng-show="!postcardSent" type="textarea" id="message" placeholder="Your Message" ng-model="postcard.message" required></textarea>
+            <input ng-show="!postcardSent" type="text" id="name" placeholder="Your Name " ng-model="postcard.name" required>
+            <input ng-show="!postcardSent" type="text" id="email" placeholder="Your E-mail " ng-model="postcard.email" required>
+
+            <!-- ERROR HANDLING -->
+            <!-- error handling, if user has not filled out contact form properly -->            
+            <!-- large error stamp on left -->
+            <img ng-show="postcardError" id="error-stamp-{{errorString}}" class="animate-error-stamps" src="/app/assets/CONTACT_error_{{errorString}}.png" alt="{{errorMessage}}">
+            <!-- smaller error stamps on right -->
+            <img ng-show="topErrorPointer" id="error-topErrorPointer" class="animate-error-stamps" src="/app/assets/CONTACT_error_pointer.png" alt="401">
+            <img ng-show="bottomErrorPointer" id="error-bottomErrorPointer" class="animate-error-stamps" src="/app/assets/CONTACT_error_pointer.png" alt="401">
+
+          <!-- postcard back, SENT -->
+            <img ng-show="postcardSent" id="stamp" src="/app/assets/CONTACT_stamp.png" alt="stamp">
+            <div ng-show="postcardSent" id="sent-message" class="sent-text textarea" placeholder="Your Message" ng-model="postcard.message">{{postcard.message}}</div>
+            <div ng-show="postcardSent" id="sent-name" class="sent-text" ng-model="postcard.name">{{postcard.name}}</div>
+            <div ng-show="postcardSent" id="sent-email" class="sent-text" ng-model="postcard.email">{{postcard.email}}</div> 
+
+            <input type="submit" hidden>
+          </form>
+
+          <!-- text under postcard -->
+          <div class="text active" ng-show="postcardFront" ng-click="showBack()">
+              <h1><span>FLIP</span></h1>
+          </div>
+          <div class="text active" ng-hide="postcardFront">
+            <h1 ng-show="!postcardSent"><span ng-click="showFront()">FLIP</span> <span ng-click="sendPostcard()">SEND</span></h1>
+            <h1 ng-hide="!postcardSent"><span ng-click="anotherPostcard()">SEND ANOTHER?</span></h1>
+          </div>
+          <!-- end of postcard text -->
+
+
+          <!-- info and social media menu -->
+          <footer  ng-controller="TitleCtrl">
+            <div ng-hide="socialMedia" id="viewer-info-footer">
+              <div ng-click="showSocialMedia()" id="info" class="active animate-social-media"></div>
+            </div> 
+            <div ng-show="socialMedia" id="viewer-inner-footer" class="animate-social-media">
+              <!-- twitter button -->
+              <a href="https://twitter.com/backbeatnet"><div id="tw-button" class="active menu"></div></a>
+              <!-- facebook button -->
+              <a href="https://www.facebook.com/BackbeatNetworks"><div id="fb-button" class="active menu"></div></a>
+              <!-- linkedin button -->
+              <a href="https://www.linkedin.com/company/backbeat-networks-inc-"><div id="li-button" class="active menu"></div></a>
+              <!-- hide social media/down button -->
+              <div ng-click="hideSocialMedia()" id="down-button" class="active"></div> 
+              
+            </div>
+
+          </footer>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</div>

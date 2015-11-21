@@ -1,0 +1,59 @@
+ <div ng-controller="HomeCtrl" id="wrapper-entire" class="full-frame page-home home">
+      <div class="opening" ng-hide="homeReady">
+        <!-- here or on stylesheet set up dark opening -->
+      </div>
+      <div id="viewer-cluster">
+        <nav id="viewer-outer-menubar">
+          <ul class="links">
+            <li><a class="inactive">HOME</a></li>
+            <li><a href="/app/contact" class="active">CONTACT</a></li>
+            <li><a href="/app/about" class="active">ABOUT</a></li>
+            <li><a href="" class="active" onclick='return false;'>PRODUCTS</a></li>
+            <li><a href="" class="active" onclick='return false;'>CLIENTS</a></li>
+          </ul>
+        </nav>
+        <div id="viewer-trim">
+          <div id="viewer-core">
+            <div id="viewer-clipper">
+              <div id="viewer-scaler">
+                <div id="plane-8b" class="parallax-layer home-early"></div>
+                <div id="plane-8a" class="parallax-layer home-later"></div>
+                <div id="plane-7"  class="parallax-layer home-later"></div>
+                <div id="plane-6b" class="parallax-layer home-later"></div>
+                <div id="plane-6a" class="parallax-layer home-later"></div>
+                <div id="plane-5"  class="parallax-layer home-later"></div>
+                <div id="plane-4"  class="parallax-layer home-later"></div>
+                <div id="plane-3b" class="parallax-layer home-later"></div>
+                <div id="plane-3a" class="parallax-layer home-early"></div>
+                <div id="plane-2"  class="parallax-layer home-later"></div>
+                <div id="plane-1"  class="parallax-layer home-later"></div>
+                <div id="plane-0"  class="parallax-layer home-later"></div>
+              </div>
+            </div>
+
+            <footer  ng-controller="TitleCtrl">
+              <div ng-hide="socialMedia" id="viewer-info-footer">
+                <div ng-click="showSocialMedia()" id="info" class="active animate-social-media"></div>
+              </div> 
+              <div ng-show="socialMedia" id="viewer-inner-footer" class="animate-social-media">
+                <!-- twitter button -->
+                <a href="https://twitter.com/backbeatnet"><div id="tw-button" class="active menu"></div></a>
+                <!-- facebook button -->
+                <a href="https://www.facebook.com/BackbeatNetworks"><div id="fb-button" class="active menu"></div></a>
+                <!-- linkedin button -->
+                <a href="https://www.linkedin.com/company/backbeat-networks-inc-"><div id="li-button" class="active menu"></div></a>
+                <!-- hide social media/down button -->
+                <div ng-click="hideSocialMedia()" id="down-button" class="active"></div> 
+                
+              </div>
+
+            </footer>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+</div>
