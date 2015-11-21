@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="BackbeatApp">
+<head>
+  <meta charset="utf-8">
+  <title ng-controller="TitleCtrl">{{title}}</title>
+  <meta name="description" content="Backbeat Networks">
+
+  <base href="/app/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS stylesheets -->
+  <link rel="stylesheet" href="style/normalize.css">
+  <link rel="stylesheet" href="style/app.css">
+
+  <!-- adds typekit to the site, to access adobe fonts -->
+  <script type="text/javascript">
+    (function(d) {
+      var config = {
+        kitId: 'exc2eqi',
+        scriptTimeout: 3000
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+
+  <!-- angular and jquery via CDN, not currently in use -->
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+
+  <!-- including files in vendor folder, not using Bower -->
+  <script src="vendor/angular.min.js"></script>
+  <script src="vendor/angular-route.min.js"></script>
+  <script src="vendor/angular-aria.min.js"></script>
+  <script src="vendor/angular-animate.min.js"></script>  
+  <script src="vendor/jquery.min.js"></script>
+
+  <!-- app files -->
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/backbeat.js"></script>
+  <script src="js/animations.js"></script>
+</head>
+<body ng-cloak>
+
+
+  <div ng-view></div>
+
+  
+</body>
+</html>
