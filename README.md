@@ -3,12 +3,16 @@
 A project to update the Backbeat Networks website in keeping with the provided specs and infographics.
 
 To view the website, download all files locally.
-Using Terminal, go to the directory where you put all the files and type:
-`python -mSimpleHTTPServer`  
-Open your browser and go to this URL:
+Using Terminal, 
+
+* go to the directory where you put all the files and type: `python -mSimpleHTTPServer`  
+ * Open your browser and go to this URL:
+	[http://localhost:8000/](http://localhost:8000/)
+
+if you have any trouble, try:
 `http://localhost:8000/app/` 
 OR 
-`http://localhost:8000/app/#/` if you have any trouble
+`http://localhost:8000/app/#/` 
 
 
 ##Locations of text and data
