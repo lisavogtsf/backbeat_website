@@ -1,0 +1,205 @@
+[
+  {
+   "id": "becka",
+    "name": "Becka",
+    "haikus": [
+      {
+        "line-one": "damn you internet",
+        "line-two": "sat here already too long",
+        "line-three": "now my tea is cold"
+      },
+      {
+        "line-one": "damn you internet",
+        "line-two": "sat here already too long",
+        "line-three": "now my beer is warm"
+      }
+    ]
+  },
+  {
+    "id": "dave",
+    "name": "Dave",
+    "haikus": [      
+    { 
+        "line-one": "Pixels glow in fire",
+        "line-two": "Fog monster creeping bayward",
+        "line-three": "Type faster dammit" 
+      },
+      {
+        "line-one": "Ninety nine bottles",
+        "line-two": "Monitor softly glowing",
+        "line-three": "Three cheers for whisky"
+      },
+      {
+        "line-one": "Bird lands on the ledge",
+        "line-two": "Staring at the glowing screen",
+        "line-three": "Turn and toss some bread"
+      },
+      {
+        "line-one": "Staring into space",
+        "line-two": "A child's laughter echoes",
+        "line-three": "Oh that's the reason"
+      },
+      {
+        "line-one": "Broken bits of code",
+        "line-two": "Sun shines through the window pane",
+        "line-three": "Compiler is slow"
+      },
+      {
+        "line-one": "Pixelated fern",
+        "line-two": "Ferocious code dinosaur",
+        "line-three": "Vegetarian"
+      },
+      {
+        "line-one": "New mac air book yea!",
+        "line-two": "I'll recharge with adapter",
+        "line-three": "Oh wait wrong cable"
+      },
+      {
+        "line-one": "Upgrade the OS",
+        "line-two": "So many new devices",
+        "line-three": "Another fragment"
+      }
+    ]
+  },
+  {
+    "id": "jim",
+    "name": "Jim",
+    "haikus": [
+      {
+        "line-one": "Stars blanket the night",
+        "line-two": "Flames lick, roast the marshmallow",
+        "line-three": "Jeans collect the warmth"
+      }
+    ]
+  },
+  {
+    "id": "john",
+    "name": "John",
+    "haikus": [
+      { 
+        "line-one": "Oh look! It's a rock!",
+        "line-two": "I will never forget you...",
+        "line-three": "Oh Look! It's a rock!" 
+      }
+    ]
+  },
+  {
+    "id": "josh",
+    "name": "Josh", 
+    "haikus": [
+     {
+        "line-one": "Bleeding black and gold",
+        "line-two": "In the city by the bay",
+        "line-three": "Drinking Napa wine"
+      }
+    ]
+  },
+  {
+    "id": "lisa",
+    "name" : "Lisa",
+    "haikus": [
+      {
+        "line-one": "It seems like magic",
+        "line-two": "Spinning coffee into code",
+        "line-three": "All in a day's work"
+      },
+      {
+        "line-one": "So many hoodies",
+        "line-two": "So little splendor, it's true --",
+        "line-three": "My kind of dress code"
+      }
+    ]
+  },
+  {
+    "id": "naveen",
+    "name": "Naveen",
+    "haikus": [
+      {
+        "line-one": "Setup with three screens",
+        "line-two": "Making games in pajamas",
+        "line-three": "Just living the dream"
+      }
+    ]
+  },
+  {
+    "id": "randy",
+    "name": "Randy",
+    "haikus": [
+      {
+        "line-one": "The fog cools the bay",
+        "line-two": "Another day's task transforms",
+        "line-three": "Coffee into code"
+      },
+      {
+        "line-one": "Once upon a time",
+        "line-two": "In a land far far away",
+        "line-three": "I just lost the game"
+      }
+    ]
+  },
+  {
+    "id": "robert",
+    "name": "Robert",
+    "haikus": [
+      {
+        "line-one": "Of all the gin joints",
+        "line-two": "all the towns; all the world",
+        "line-three": "I walk into yours"
+      }
+    ]
+  },
+  {
+    "id": "russell",
+    "name": "Russell",
+    "haikus": [
+      {
+        "line-one": "This guy, Borogove",
+        "line-two": "Cause of and solution to",
+        "line-three": "Most of our problems"
+      } 
+    ]
+  },
+    {
+    "id": "william",
+    "name": "Will",
+    "haikus": [
+      {
+        "line-one": "You can't trust a man",
+        "line-two": "With Motorbikes, two kittens",
+        "line-three": "And unicorn shoes"
+      },
+      {
+        "line-one": "Furry moth aflight",
+        "line-two": "Flapping against the dreamscape",
+        "line-three": "Babby babby bug"
+      },
+      { 
+        "line-one": "Sound judgment, Sound mind",
+        "line-two": "Sound body, and Sound system",
+        "line-three": "Now where my keys at?" 
+      },
+      {
+        "line-one": "What kind of person",
+        "line-two": "Cares about pixel placement",
+        "line-three": "In this day and age"
+      },
+      {
+        "line-one": "You may never dance",
+        "line-two": "Like Michael Jackson, but I",
+        "line-three": "Will get there some day"
+      },
+      {
+        "line-one": "Pills booze pills booze pills",
+        "line-two": "Booze pills booze pills booze pills booze",
+        "line-three": "Equals deep deep sleep"
+      },
+      {
+        "line-one": "The answer to where",
+        "line-two": "You forgot your silly keys",
+        "line-three": "Always forty-two"
+      }
+
+    ]
+  }
+
+]
