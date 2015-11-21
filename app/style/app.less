@@ -20,10 +20,10 @@
   src: url('../assets/Gotham-Book.otf') format('opentype');
 }
 @font-face {
-  /*font-family: 'Millie-Light';*/
-  /*src: url('../assets/Millie-Light.otf') format('opentype');*/
   font-family: 'Millie-Thin';
   src: url('../assets/Millie-Thin.otf') format('opentype');
+  /*font-family: 'Millie-Light';*/
+  /*src: url('../assets/Millie-Light.otf') format('opentype');*/
 }
 body {
   font-family: "din-condensed-web", sans-serif;
@@ -51,8 +51,9 @@ ul.links li {
   height: 100vh;
 }
 .opening {
-
+  /* for use with planned fade-in opening */
 }
+
 #viewer-cluster {
   width: 82vw;
   height: 49vw;
@@ -66,59 +67,64 @@ ul.links li {
   top: 7.000000000000001vw;
   left: 9vw;
   right: 9vw;
-}
-#viewer-cluster #viewer-outer-menubar {
-  height: 1.2em;
-  padding-right: 1.2195121951219512%;
-  padding-bottom: .2em;
-  color: #163131;
-  text-align: right;
-}
-#viewer-cluster #viewer-trim {
-  padding: 1.2195121951219512%;
-  width: 97.5609756097561%;
-  height: 91.83673469387756%;
-  background-color: #163131;
-}
-#viewer-cluster #viewer-core {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  /*border: green medium solid;*/
-}
-/*#viewer-cluster #viewer-core #viewer-clipper {
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-}
-#viewer-cluster #viewer-core #viewer-clipper #viewer-scaler {
-  transform-origin: 0 0 0;
-  -webkit-transform-origin: 0 0 0;
-  transform: scale(0.01);
-  -webkit-transform: scale(0.01);
-}*/
 
-/*clicking on info button toggles between viewer-info-footer and viewer-inner-footer*/
-/*hide/show handled by angular TitleCtrl*/
-#viewer-cluster #viewer-core #viewer-info-footer {
-  height: 6.5%;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  z-index: 0;
-  text-align: right;
-}
-#viewer-cluster #viewer-core #viewer-inner-footer {
-  height: 6.5%;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  z-index: 100;
-  text-align: right;
+  #viewer-outer-menubar {
+    height: 1.2em;
+    padding-right: 1.2195121951219512%;
+    padding-bottom: .2em;
+    color: #163131;
+    text-align: right;
+  }
+  #viewer-trim {
+    padding: 1.2195121951219512%;
+    width: 97.5609756097561%;
+    height: 91.83673469387756%;
+    background-color: #163131;
+  }
+  #viewer-core {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /*border: green medium solid;*/
+  }
+  /*#viewer-core #viewer-clipper {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+  }
+  #viewer-core #viewer-clipper #viewer-scaler {
+    transform-origin: 0 0 0;
+    -webkit-transform-origin: 0 0 0;
+    transform: scale(0.01);
+    -webkit-transform: scale(0.01);
+  }*/
+
+  /* clicking on info button toggles between viewer-info-footer and viewer-inner-footer*/
+  /* hide/show handled by angular TitleCtrl*/
+  #viewer-core {
+
+    #viewer-info-footer {
+      height: 6.5%;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      z-index: 0;
+      text-align: right;
+    }
+
+    #viewer-inner-footer {
+      height: 6.5%;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      z-index: 100;
+      text-align: right;
+    }
+  }
 }
 
 
@@ -129,30 +135,29 @@ ul.links li {
 
 div.home {
   background-color: #faab48;
-}
-/*corresponds to viewer border*/
-.home #viewer-cluster #viewer-trim {
-  background-color: #163131;
-}
-/*HOME grapic, eventually parallax, currently static*/
-.home #viewer-core {
-  background-image: url(../assets/HOME_10_staticPage.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  border: #163131 thin solid;
-}
-.home #viewer-cluster #viewer-core #viewer-info-footer  {
-  /* for final, no background-color: */
-  /*background should be extension of home image/parallax*/ 
-  /*background-color: #427f71;*/
-}
-/*viewer-inner-footer background is determined by viewer-trim color*/
+  
+  /*corresponds to viewer border*/
+  #viewer-cluster {
+    #viewer-trim {
+      background-color: #163131;
+    }
+    /*HOME grapic, eventually parallax, currently static*/
+    #viewer-core {
+      background-image: url(../assets/HOME_10_staticPage.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      border: #163131 thin solid;
+    }
+  }
 
-.home a.active {
-  color: #163131;
-}
-.home a.inactive {
-  color: #c67d3c;
+  a {
+    &.active {
+      color: #163131;
+    }
+    &.inactive {
+      color: #c67d3c;
+    }
+  } 
 }
 
 
