@@ -33,5 +33,5 @@ BackbeatApp.config(['$routeProvider', '$locationProvider', function($routeProvid
 
   // Using this mode requires URL rewriting on server side, 
   // have to rewrite all your links to entry point of your application (e.g. index.html)
-  $locationProvider.html5Mode(false).hashPrefix("#");
+  $locationProvider.html5Mode(true).hashPrefix("#");
 }]);
