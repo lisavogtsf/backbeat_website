@@ -2,7 +2,7 @@
 
 var BackbeatControllers = angular.module('BackbeatControllers', []);
 
-BackbeatControllers.controller('TitleCtrl', ['$scope', '$http', '$route', '$location', function ($scope, $http, $route, $location){
+BackbeatControllers.controller('TitleCtrl', ['$scope', '$http', function ($scope, $http){
   $scope.title = "Backbeat Networks";
 
   // control show/hide of social media bar
@@ -72,7 +72,7 @@ BackbeatControllers.controller('AboutCtrl', ['$scope', '$http', function ($scope
 }]);
 
 // contact page controller
-BackbeatControllers.controller('ContactCtrl', ['$scope', '$http', '$location', function ($scope, $http, $location){
+BackbeatControllers.controller('ContactCtrl', ['$scope', '$http', function ($scope, $http){
   console.log("from contact controller");
 
   // // initializing state variables for Contact page (possibly over-commented)
@@ -283,12 +283,3 @@ BackbeatControllers.controller('ContactCtrl', ['$scope', '$http', '$location', f
   }
 
 }]);
-
-// BackbeatControllers.controller('ProductsCtrl', ['$scope', '$http', function ($scope, $http){
-  
-// }]);
-
-// BackbeatControllers.controller('ClientsCtrl', ['$scope', '$http', function ($scope, $http){
-  
-// }]);
-

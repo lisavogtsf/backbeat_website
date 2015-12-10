@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="BackbeatApp">
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title ng-controller="TitleCtrl">{{title}}</title>
+  <title>Backbeat Networks</title>
   <meta name="description" content="Backbeat Networks">
 
-  <base href="/app/">
+  <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,9 +24,9 @@
     })(document);
   </script>
 
-  <!-- including external javascript files in vendor folder -->
-  <script src="vendor/angular.min.js"></script>
-  <script src="vendor/angular-route.min.js"></script>
+  <!-- vendor files local and cdn -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>  
   <script src="vendor/angular-aria.min.js"></script>
   <script src="vendor/jquery.min.js"></script>
 
@@ -35,7 +35,7 @@
   <script src="js/controllers.js"></script>
   <script src="js/backbeat.js"></script>
 </head>
-<body ng-cloak>
+<body ng-app="BackbeatApp">
   <!-- TODO necessary to have header/footer? -->
   <!-- <div ng-include="templates/header.html"></div> -->
   <div ng-view></div>
