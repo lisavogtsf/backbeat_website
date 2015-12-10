@@ -4,12 +4,10 @@
 var BackbeatApp = angular.module('BackbeatApp', [
   'ngRoute',
   'BackbeatControllers',
-  'BackbeatAnimations',
   'ngAria'
-  // ,'BackbeatFactories'
 ]);
 
-BackbeatApp.config(['$routeProvider', '$locationProvider', function($routeProvider,  $locationProvider) {
+BackbeatApp.config(['$routeProvider', function ($routeProvider) {
   $routeProvider.
     when('/', {
       templateUrl: 'partials/home.html',
@@ -23,15 +21,7 @@ BackbeatApp.config(['$routeProvider', '$locationProvider', function($routeProvid
       templateUrl: 'partials/contact.html',
       controller: 'ContactCtrl'
     }).
-    // when('/title',{
-    //   templateUrl: 'partials/test.html',
-    //   controller: 'TitleCtrl'
-    // }).
   otherwise({
     redirectTo: '/'
   });
-
-  // Using this mode requires URL rewriting on server side, 
-  // have to rewrite all your links to entry point of your application (e.g. index.html)
-  $locationProvider.html5Mode(true).hashPrefix("#");
 }]);

@@ -1,21 +1,5 @@
 [
   {
-   "id": "becka",
-    "name": "Becka",
-    "haikus": [
-      {
-        "line-one": "damn you internet",
-        "line-two": "sat here already too long",
-        "line-three": "now my tea is cold"
-      },
-      {
-        "line-one": "damn you internet",
-        "line-two": "sat here already too long",
-        "line-three": "now my beer is warm"
-      }
-    ]
-  },
-  {
     "id": "dave",
     "name": "Dave",
     "haikus": [      
