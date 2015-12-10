@@ -180,7 +180,7 @@ BackbeatControllers.controller('ContactCtrl', ['$scope', '$http', function ($sco
     if ($scope.postcard.message && $scope.postcard.email) {
 
       // all needed fields are filled in, now check if they put a valid email
-      var emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}/;
+      var emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,12}/;
       if (emailRegex.test($scope.postcard.email)){
         // success = valid email address
         console.log("valid email address");
