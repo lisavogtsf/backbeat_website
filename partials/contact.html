@@ -14,13 +14,13 @@
           
           <!-- postcard front -->
           <div ng-show="postcardFront" ng-click="showBack()" class="postcard front active" alt="Greetings from the Internet! (postcard)">
-            <img ng-src="../assets/CONTACT_tagline_{{taglineIndex + 1}}.png" alt="{{tagline[taglineIndex]}}">
+            <img ng-src="assets/CONTACT_tagline_{{taglineIndex + 1}}.png" alt="{{tagline[taglineIndex]}}">
           </div>
 
           <!-- postcard back, form to fill out, unsent -->
           <form ng-hide="postcardFront" ng-submit="sendPostcard()" ng-click="clearPostcardErrors()" novalidate class="postcard back" alt="back of postcard, write your message here">
-            <img id="greeting" ng-src="../assets/CONTACT_greeting_{{greetingIndex + 1}}.png" alt="{{greeting[greetingIndex]}}">
-            <img id="closing" ng-src="..../assets/CONTACT_closing_{{closingIndex + 1}}.png" alt="{{closing[closingIndex]}}">
+            <img id="greeting" ng-src="assets/CONTACT_greeting_{{greetingIndex + 1}}.png" alt="{{greeting[greetingIndex]}}">
+            <img id="closing" ng-src="assets/CONTACT_closing_{{closingIndex + 1}}.png" alt="{{closing[closingIndex]}}">
             <textarea ng-show="!postcardSent" type="textarea" id="message" placeholder="Your Message" ng-model="postcard.message" required></textarea>
             <input ng-show="!postcardSent" type="text" id="name" placeholder="Your Name " ng-model="postcard.name" required>
             <input ng-show="!postcardSent" type="text" id="email" placeholder="Your E-mail " ng-model="postcard.email" required>
@@ -28,13 +28,13 @@
             <!-- ERROR HANDLING -->
             <!-- error handling, if user has not filled out contact form properly -->            
             <!-- large error stamp on left -->
-            <img ng-show="postcardError" id="error-stamp-{{errorString}}" class="animate-error-stamps" src="../assets/CONTACT_error_{{errorString}}.png" alt="{{errorMessage}}">
+            <img ng-show="postcardError" id="error-stamp-{{errorString}}" class="animate-error-stamps" src="assets/CONTACT_error_{{errorString}}.png" alt="{{errorMessage}}">
             <!-- smaller error stamps on right -->
-            <img ng-show="topErrorPointer" id="error-topErrorPointer" class="animate-error-stamps" src="../assets/CONTACT_error_pointer.png" alt="401">
-            <img ng-show="bottomErrorPointer" id="error-bottomErrorPointer" class="animate-error-stamps" src="../assets/CONTACT_error_pointer.png" alt="401">
+            <img ng-show="topErrorPointer" id="error-topErrorPointer" class="animate-error-stamps" src="assets/CONTACT_error_pointer.png" alt="401">
+            <img ng-show="bottomErrorPointer" id="error-bottomErrorPointer" class="animate-error-stamps" src="assets/CONTACT_error_pointer.png" alt="401">
 
           <!-- postcard back, SENT -->
-            <img ng-show="postcardSent" id="stamp" src="../assets/CONTACT_stamp.png" alt="stamp">
+            <img ng-show="postcardSent" id="stamp" src="assets/CONTACT_stamp.png" alt="stamp">
             <div ng-show="postcardSent" id="sent-message" class="sent-text textarea" placeholder="Your Message" ng-model="postcard.message">{{postcard.message}}</div>
             <div ng-show="postcardSent" id="sent-name" class="sent-text" ng-model="postcard.name">{{postcard.name}}</div>
             <div ng-show="postcardSent" id="sent-email" class="sent-text" ng-model="postcard.email">{{postcard.email}}</div> 
