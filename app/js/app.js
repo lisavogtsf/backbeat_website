@@ -6,7 +6,6 @@ var BackbeatApp = angular.module('BackbeatApp', [
   'BackbeatControllers',
   'BackbeatAnimations',
   'ngAria'
-  // ,'BackbeatFactories'
 ]);
 
 BackbeatApp.config(['$routeProvider', '$locationProvider', function($routeProvider,  $locationProvider) {
