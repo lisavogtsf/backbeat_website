@@ -24,10 +24,7 @@
     })(document);
   </script>
 
-  <!-- angular and jquery via CDN, not currently in use -->
-  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
-
-  <!-- including files in vendor folder, not using Bower -->
+  <!-- including external javascript files in vendor folder -->
   <script src="vendor/angular.min.js"></script>
   <script src="vendor/angular-route.min.js"></script>
   <script src="vendor/angular-aria.min.js"></script>
@@ -42,9 +39,9 @@
 </head>
 <body ng-cloak>
 
-
+  <div ng-include="templates/header.html"></div>
   <div ng-view></div>
+  <div ng-include="templates/footer.html"></div>
 
-  
 </body>
 </html>
