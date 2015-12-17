@@ -4,12 +4,9 @@ A project to update the Backbeat Networks website in keeping with the provided s
 
 * Web development (HTML/CSS/JS/Angular) by Lisa Vogt
 * Design and artwork by Will H.
+* view the website on Github Pages: [http://lisavogtsf.github.io/backbeat_website/](http://lisavogtsf.github.io/backbeat_website/)
 
 ![Backbeat Home Page](/assets/BackbeatHomeSnapshot.png)
-
-
-##View the Website on Github Pages
-* go to [http://lisavogtsf.github.io/backbeat_website/](http://lisavogtsf.github.io/backbeat_website/)
 
 ##Viewing the website locally
 To view the website, download all files/clone this repository.
