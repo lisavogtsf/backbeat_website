@@ -2,10 +2,13 @@
 
 A project to update the Backbeat Networks website in keeping with the provided specs and infographics.
 
-Web development (HTML/CSS/JS/Angular) by Lisa Vogt
-Design and artwork by Will H.
+* Web development (HTML/CSS/JS/Angular) by Lisa Vogt
+* Design and artwork by Will H.
 
-##Website on Github Pages
+![Backbeat Home Page](/assets/BackbeatHomeSnapshot.png)
+
+
+##View the Website on Github Pages
 * go to [http://lisavogtsf.github.io/backbeat_website/](http://lisavogtsf.github.io/backbeat_website/)
 
 ##Viewing the website locally
@@ -26,7 +29,7 @@ This mockup is based on the Angular seed project, available at [https://github.c
 
 Lisa Vogt
 
-lisa@backbeat.net
-lisa@lisavogtsf.com
+* lisa@backbeat.net
+* lisa@lisavogtsf.com
 
 2015
