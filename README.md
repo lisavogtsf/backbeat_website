@@ -17,16 +17,15 @@ Using Terminal,
 	[http://localhost:8000/](http://localhost:8000/)
 
 ##Angular Seed
-This mockup is based on the Angular seed project, available at [https://github.com/angular/angular-seed](https://github.com/angular/angular-seed)
+This site is based on the Angular seed project, available at [https://github.com/angular/angular-seed](https://github.com/angular/angular-seed)
 
-* However, this mockup site does not use Bower or Node
-* It requires a server of some kind, a python simple server will suffice, with directions above. 
+* However, in contrast to the seed project, this mockup site does not use Bower or Node
+* It does require a server of some kind, a python simple server will suffice, with directions above. 
 
 ---
 
 Lisa Vogt
 
-* lisa@backbeat.net
 * lisa@lisavogtsf.com
 
 2015
